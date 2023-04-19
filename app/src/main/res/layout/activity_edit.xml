@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Добавление записи"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etTeeth"
+        android:hint="Введите название процедуры: "/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Введите дату процедуры:"
+        android:textColor="@color/black"/>
+
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clndTeeth"
+        android:onClick="onClick"
+        android:selectedWeekBackgroundColor="#ff0000"
+        android:weekNumberColor="#0000ff"
+        android:weekSeparatorLineColor="#00ff00"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите заметку: "
+        android:id="@+id/etNote"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Введите статус зуба:" />
+
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/status"
+        android:id="@+id/spStatus"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_weight="1">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAddEdit"
+        android:text="Добавить запись" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBackEdit"
+        android:text="Назад"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

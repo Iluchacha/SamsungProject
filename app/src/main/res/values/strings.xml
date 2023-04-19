@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyTeeth</string>
+    <string-array name="status">
+        <item>Вылечен</item>
+        <item>В процессе лечения</item>
+        <item>Нуждается в лечении</item>
+        <item>Удалён</item>
+    </string-array>
+</resources>
