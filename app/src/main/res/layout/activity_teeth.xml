@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TeethActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/activity_background">
 
     <TextView
         android:layout_width="match_parent"
@@ -24,28 +25,21 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Добавить запись"
+        android:text="@string/add"
         android:id="@+id/btnAdd"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnDeleteAll"
-        android:text="Удалить все записи"/>
-
-        <!--comment
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btnDeleteTable"
-                    android:text="Удалить"/>-->
+        android:text="@string/delete"/>
 
     <Button
         android:id="@+id/btnBack"
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content"
-        android:text="Назад"/>
+        android:text="@string/back"/>
 
     </LinearLayout>
 

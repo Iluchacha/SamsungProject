@@ -1,33 +1,52 @@
 package com.example.teethproject;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.Toast;
-import android.widget.Toolbar;
+import android.widget.LinearLayout;
 
 public class MainActivity extends Activity{
 
-    Button teeth2;
+    LinearLayout teethClick;
+    Button btnClinic, btnDentist;
     private MyDraw gt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_ACTION_BAR);
         super.onCreate(savedInstanceState);
         gt = new MyDraw(this);
-        setContentView(gt);
-        //setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
+        teethClick = findViewById(R.id.teethClick);
+        btnClinic = findViewById(R.id.btnClinic);
+        btnDentist = findViewById(R.id.btnDentist);
+        teethClick.addView(gt);
+        Intent j = new Intent(MainActivity.this, ClinicActivity.class);
+        Intent d = new Intent(MainActivity.this, DentistActivity.class);
+
+        btnClinic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(j);
+            }
+        });
+
+        btnDentist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(d);
+            }
+        });
+
+
+
 
 
 //
@@ -46,13 +65,16 @@ public class MainActivity extends Activity{
 //        });
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        setContentView(gt);
-
-
-    }
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        setContentView(R.layout.activity_main);
+//        teethClick = findViewById(R.id.teethClick);
+//        gt = new MyDraw(this);
+//        teethClick.addView(gt);
+//
+//
+//    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -60,18 +82,18 @@ public class MainActivity extends Activity{
         if (eventAction == MotionEvent.ACTION_DOWN){
 //            float metrics = getResources().getDisplayMetrics().density;
             System.out.println("\n" + event.getX() + " " + event.getY());
-            int v = gt.isClicked(event.getX(), event.getY() - 100);
+            int v = gt.isClicked(gt.currentX , gt.currentY - gt.start);
+//            int v = gt.isClicked(event.getX(), teethClick.getY() - 100);
+            //Toast.makeText(this, Integer.toString(teethClick.getLeft()) + " " + teethClick.getTop(), Toast.LENGTH_SHORT).show();
             Intent i = new Intent(MainActivity.this, TeethActivity.class);
             if (v != 100){
                 System.out.println("\nYES\n");
-                Toast.makeText(this, Integer.toString(v), Toast.LENGTH_SHORT).show();
                 i.putExtra("teethId", v);
                 i.putExtra("teethName", gt.getName(v));
                 startActivity(i);
             }
             else{
                 System.out.println("\nNO\n");
-                Toast.makeText(this, "No", Toast.LENGTH_SHORT).show();
             }
         }
         return true;

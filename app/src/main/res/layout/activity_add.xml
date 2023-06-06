@@ -5,44 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AddActivity">
+    tools:context=".AddActivity"
+    android:background="@drawable/activity_background">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="25sp"
-        android:text="Данные о клинике"/>
+        android:text="@string/clinic_data"
+        android:textColor="@color/teeth"/>
 
     <EditText
         android:id="@+id/etClinic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Название:"/>
+        android:color="@color/teeth"
+        android:hint="@string/clinic_title"/>
 
     <EditText
         android:id="@+id/etAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Адрес:"/>
+        android:hint="@string/clinic_address"/>
 
     <EditText
         android:id="@+id/etPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Номер телефона:"/>
+        android:inputType="phone"
+        android:hint="@string/clinic_phone"/>
 
     <Button
         android:id="@+id/btnAddClinic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Добавить"/>
+        android:text="@string/add"/>
 
     <Button
         android:id="@+id/btnBackClinic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Назад"/>
+        android:text="@string/back"/>
 
 
 </LinearLayout>

@@ -5,21 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -32,13 +26,10 @@ public class TeethActivity extends AppCompatActivity {
 
     dbUpdate mDBConnector;
     Context mContext;
-    Button btnBack, btnDeleteAll, btnDeleteTable, btnAdd;
+    Button btnBack, btnDeleteAll, btnAdd;
     TextView teethTxt;
     ListView teethList;
-    SimpleCursorAdapter scAdapter;
-    Cursor cursor;
     myListAdapter myAdapter;
-    SQLiteOpenHelper dbh;
 
     int ADD_ACTIVITY = 0;
     int UPDATE_ACTIVITY = 1;
@@ -62,7 +53,7 @@ public class TeethActivity extends AppCompatActivity {
 
         mContext = this;
         mDBConnector = new dbUpdate(this);
-        myAdapter = new myListAdapter(mContext, mDBConnector.selectAll(teethId));
+        myAdapter = new myListAdapter(mContext, mDBConnector.tselectAll(teethId));
         teethList.setAdapter(myAdapter);
         updateList();
 
@@ -95,7 +86,7 @@ public class TeethActivity extends AppCompatActivity {
         btnDeleteAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDBConnector.deleteAll(teethId);
+                mDBConnector.tdeleteAll(teethId);
                 updateList();
             }
         });
@@ -131,18 +122,17 @@ public class TeethActivity extends AppCompatActivity {
         if (resultCode == Activity.RESULT_OK) {
             Teeth md = (Teeth) data.getExtras().getSerializable("Teeth");
             if (requestCode == UPDATE_ACTIVITY) {
-                Toast.makeText(this, "UPDATE", Toast.LENGTH_SHORT).show();
-                mDBConnector.update(md);
+                mDBConnector.tupdate(md);
             }
             else
-                mDBConnector.insert(md.gettId(), md.getName(), md.getDate(), md.getNote(), md.getStatus());
+                mDBConnector.tinsert(md.gettId(), md.getName(), md.getDate(), md.getNote(), md.getStatus());
             updateList();
         }
     }
 
 
     private void updateList () {
-        myAdapter.setArrayMyData(mDBConnector.selectAll(getIntent().getIntExtra("teethId", 0)));
+        myAdapter.setArrayMyData(mDBConnector.tselectAll(getIntent().getIntExtra("teethId", 0)));
         myAdapter.notifyDataSetChanged();
     }
 

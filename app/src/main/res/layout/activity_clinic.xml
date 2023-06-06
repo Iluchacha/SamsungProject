@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ClinicActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/activity_background">
 
     <ListView
         android:id="@+id/clinicList"
@@ -14,15 +15,21 @@
         android:layout_weight="1"/>
 
     <Button
-        android:id="@+id/addClinick"
+        android:id="@+id/addClinic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Добавить"/>
+        android:text="@string/add"/>
+
+    <Button
+        android:id="@+id/deleteClinic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"/>
 
     <Button
         android:id="@+id/backClinic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Назад"/>
+        android:text="@string/back"/>
 
 </LinearLayout>

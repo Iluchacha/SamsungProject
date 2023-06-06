@@ -1,9 +1,45 @@
 <resources>
     <string name="app_name">MyTeeth</string>
+
+    <string name="clinic_data">Information about the clinic</string>
+    <string name="clinic_title">Title:</string>
+    <string name="clinic_address">Address:</string>
+    <string name="clinic_phone">Phone number:</string>
+
+    <string name="add">ADD</string>
+    <string name="delete">DELETE ALL</string>
+    <string name="back">BACK</string>
+
+    <string name="dentist_data">Dentist Information</string>
+    <string name="dentist_name">Name:</string>
+    <string name="dentist_clinic">Clinic:</string>
+    <string name="dentist_phone">Phone number:</string>
+
+    <string name="add_data">Adding an entry</string>
+    <string name="teeth_name">Enter the name of the procedure:</string>
+    <string name="teeth_date">Enter the date of the procedure:</string>
+    <string name="teeth_note">Enter a note:</string>
+    <string name="teeth_status">Enter the tooth status:</string>
+
+    <string name="dental">DENTAL CARD</string>
+    <string name="st1"> - CURED</string>
+    <string name="st2"> - NEEDS TREATMENT</string>
+    <string name="st3"> - DELETED</string>
+    <string name="clinics">MY CLINICS</string>
+    <string name="dentists">MY DENTISTS</string>
+
+    <string name="wisdom">Wisdom tooth</string>
+    <string name="molar2">2nd molar</string>
+    <string name="molar1">1st molar</string>
+    <string name="premolar2">2nd premolar</string>
+    <string name="premolar1">1st premolar</string>
+    <string name="canine">Canine</string>
+    <string name="side_incisor">Side incisor</string>
+    <string name="incisor">Incisor</string>
+
     <string-array name="status">
-        <item>Вылечен</item>
-        <item>В процессе лечения</item>
-        <item>Нуждается в лечении</item>
-        <item>Удалён</item>
+        <item>Cured</item>
+        <item>Needs treatment</item>
+        <item>Deleted</item>
     </string-array>
 </resources>
