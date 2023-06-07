@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">MyTeeth</string>
+
+    <string name="clinic_data">Данные о клинике</string>
+    <string name="clinic_title">Название:</string>
+    <string name="clinic_address">Адрес:</string>
+    <string name="clinic_phone">Номер телефона:</string>
+
+    <string name="add">ДОБАВИТЬ</string>
+    <string name="delete">УДАЛИТЬ ВСЁ</string>
+    <string name="back">НАЗАД</string>
+
+    <string name="dentist_data">Данные о враче</string>
+    <string name="dentist_name">ФИО:</string>
+    <string name="dentist_clinic">Клиника:</string>
+    <string name="dentist_phone">Номер телефона:</string>
+
+    <string name="add_data">Добавление записи</string>
+    <string name="teeth_name">Введите название процедуры:</string>
+    <string name="teeth_date">Введите дату процедуры:</string>
+    <string name="teeth_note">Введите заметку:</string>
+    <string name="teeth_status">Введите статус зуба:</string>
+
+    <string name="dental">СТОМАТОЛОГИЧЕСКАЯ КАРТА</string>
+    <string name="st1"> - ВЫЛЕЧЕН</string>
+    <string name="st2"> - НУЖДАЕТСЯ В ЛЕЧЕНИИ</string>
+    <string name="st3"> - УДАЛЁН</string>
+    <string name="clinics">МОИ КЛИНИКИ</string>
+    <string name="dentists">МОИ ВРАЧИ</string>
+
+    <string name="wisdom">Зуб мудрости</string>
+    <string name="molar2">2-й моляр</string>
+    <string name="molar1">1-й моляр</string>
+    <string name="premolar2">2-й премоляр</string>
+    <string name="premolar1">1-й премоляр</string>
+    <string name="canine">Клык</string>
+    <string name="side_incisor">Боковой резец</string>
+    <string name="incisor">Центральный резец</string>
+
+    <string-array name="status">
+        <item>Вылечен</item>
+        <item>Нуждается в лечении</item>
+        <item>Удалён</item>
+    </string-array>
+</resources>
