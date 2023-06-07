@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddActivity"
+    android:background="@drawable/activity_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="@string/dentist_data"
+        android:textColor="@color/teeth"/>
+
+    <EditText
+        android:id="@+id/etDentistName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/dentist_name"/>
+
+    <EditText
+        android:id="@+id/etDentistClinic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/dentist_clinic"/>
+
+    <EditText
+        android:id="@+id/etDentistPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="@string/dentist_phone"/>
+
+    <Button
+        android:id="@+id/btnAddDentist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add"/>
+
+    <Button
+        android:id="@+id/btnBackDentist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/back"/>
+
+
+</LinearLayout>
